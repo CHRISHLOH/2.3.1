@@ -9,5 +9,5 @@ public interface CarService {
 
     public List<Car> getCarsByCount(int count);
 
-    public List<Car> createCarList();
+    public List<Car> getCarList();
 }

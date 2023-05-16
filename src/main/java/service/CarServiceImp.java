@@ -3,7 +3,6 @@ package service;
 import dao.CarDaoImp;
 import model.Car;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class CarServiceImp implements CarService{
@@ -21,7 +20,7 @@ public class CarServiceImp implements CarService{
     }
 
     @Override
-    public List<Car> createCarList() {
-        return carDaoImp.createCarList();
+    public List<Car> getCarList() {
+        return carDaoImp.getAllCars();
     }
 }

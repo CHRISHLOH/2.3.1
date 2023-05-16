@@ -15,7 +15,7 @@ public class CarController {
     @GetMapping(value = "/cars")
     public String carModel(Model model, @RequestParam("count") Integer count){
         CarService cars = new CarServiceImp();
-        List<Car> list = cars.createCarList();
+        List<Car> list = cars.getCarList();
         if(count != null && count > 0 && count <= 5){
             list = cars.getAllCars();
         } else {
