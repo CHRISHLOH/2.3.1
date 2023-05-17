@@ -8,6 +8,4 @@ public interface CarService {
     public List<Car> getAllCars();
 
     public List<Car> getCarsByCount(int count);
-
-    public List<Car> getCarList();
 }

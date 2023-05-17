@@ -13,10 +13,10 @@ import java.util.List;
 @Controller
 public class CarController {
     @GetMapping(value = "/cars")
-    public String carModel(Model model, @RequestParam("count") Integer count){
+    public String carModel(Model model, @RequestParam(value = "count",required = false) Integer count){
         CarService cars = new CarServiceImp();
-        List<Car> list = cars.getCarList();
-        if(count != null && count > 0 && count <= 5){
+        List<Car> list;
+        if (count == null || count >= 5){
             list = cars.getAllCars();
         } else {
             list = cars.getCarsByCount(count);
@@ -24,5 +24,4 @@ public class CarController {
         model.addAttribute("cars", list);
         return "cars";
     }
-
 }

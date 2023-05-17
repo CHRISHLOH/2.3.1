@@ -19,6 +19,7 @@ public class CarDaoImp implements CarDao{
     public List<Car> getAllCars() {
         return getCarList();
     }
+
     @Override
     public List<Car> getCarsByCount(int count) {
         return getCarList().subList(0, count);
