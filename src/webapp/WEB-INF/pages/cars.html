@@ -5,19 +5,44 @@
     <meta charset="UTF-8">
     <title>Cars</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-top: 20px;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         th, td {
-            padding: 8px;
+            padding: 12px;
             text-align: left;
             border-bottom: 1px solid #ddd;
         }
 
         th {
             background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #e9e9e9;
         }
     </style>
 </head>
@@ -27,10 +52,12 @@
     <tr>
         <th>Model</th>
         <th>Series</th>
+        <th>Colour</th>
     </tr>
     <tr th:each="car : ${cars}">
         <td th:text="${car.model}"></td>
         <td th:text="${car.series}"></td>
+        <td th:text="${car.colour}"></td>
     </tr>
 </table>
 </body>

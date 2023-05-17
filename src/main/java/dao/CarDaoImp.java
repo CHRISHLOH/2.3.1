@@ -8,11 +8,11 @@ import java.util.List;
 public class CarDaoImp implements CarDao{
     private List<Car> carList = new ArrayList<>();
     public CarDaoImp (){
-        carList.add(new Car("Car1", 1));
-        carList.add(new Car("Car2", 2));
-        carList.add(new Car("Car3", 3));
-        carList.add(new Car("Car4", 4));
-        carList.add(new Car("Car5", 5));
+        carList.add(new Car("Car1", 1, "red"));
+        carList.add(new Car("Car2", 2, "white"));
+        carList.add(new Car("Car3", 3, "blue"));
+        carList.add(new Car("Car4", 4, "green"));
+        carList.add(new Car("Car5", 5, "red"));
     }
 
     @Override
