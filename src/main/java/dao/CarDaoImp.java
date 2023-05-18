@@ -5,7 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
-
 @Repository
 public class CarDaoImp implements CarDao{
     private List<Car> carList = new ArrayList<>();
