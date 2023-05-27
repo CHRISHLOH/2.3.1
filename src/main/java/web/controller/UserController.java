@@ -5,15 +5,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
+
 import org.springframework.web.bind.annotation.*;
 import web.model.User;
 
 import web.service.UserService;
 
-
 import javax.validation.Valid;
-import java.util.List;
+
 
 @Controller
 @RequestMapping("/")
@@ -23,7 +22,7 @@ public class UserController {
 
     @GetMapping()
     public String carModel2(Model model) {
-        model.addAttribute("users", userService.getAllUsers());
+        model.addAttribute("users", userService.getUserList());
         return "users";
     }
 
